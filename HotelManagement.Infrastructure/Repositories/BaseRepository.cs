@@ -37,7 +37,7 @@ namespace HotelManagement.Infrastructure.Repositories
 
         public async Task<TEntity> GetByIdAsync(Expression<Func<TEntity, bool>> expression)
         {
-            var entity = await _dbset.FindAsync(expression);
+            var entity = await _dbset.FirstOrDefaultAsync(expression);
             return entity;
         }
 

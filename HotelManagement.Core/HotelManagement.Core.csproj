@@ -8,8 +8,17 @@
 
   <ItemGroup>
     <Folder Include="CQRS\Commands\" />
-    <Folder Include="CQRS\Queries\" />
     <Folder Include="Models\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\HotelManagement.Models\HotelManagement.Models.csproj" />
+    <ProjectReference Include="..\HotelManagement.Services\HotelManagement.Services.csproj" />
   </ItemGroup>
 
 </Project>

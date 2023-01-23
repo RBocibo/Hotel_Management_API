@@ -1,8 +1,15 @@
 using Hotel_Management_API.Extensions;
+using HotelManagement.Domain.UnitOfWorkInterface;
+using HotelManagement.Infrastructure.UnitOfWork;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.RegisterDbContext(builder.Configuration);
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
+builder.Services.RegisterAutoMapper();
+builder.Services.RegisterRepositories();
+builder.Services.RegisterServices();
+builder.Services.RegisterCQRSHandlers();
 
 // Add services to the container.
 

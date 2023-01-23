@@ -15,11 +15,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\HotelManagement.Core\HotelManagement.Core.csproj" />
     <ProjectReference Include="..\HotelManagement.Infrastructure\HotelManagement.Infrastructure.csproj" />
+    <ProjectReference Include="..\HotelManagement.Models\HotelManagement.Models.csproj" />
   </ItemGroup>
 
 </Project>
