@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HotelManagement.Domain;
+using HotelManagement.Models.DTOs;
 
 namespace HotelManagement.Models.AutoMapper
 {
@@ -8,6 +9,9 @@ namespace HotelManagement.Models.AutoMapper
         public MapperProfile()
         {
             CreateMap<GetRoomByIdDTO, Room>().ReverseMap();
+            CreateMap<CreateCustomerDTO, Customer>().ReverseMap();
+            CreateMap<CreateReservationDTO, Reservation>().ReverseMap();
+            CreateMap<CreatePaymentDTO, Payment>().ReverseMap();
         }
     }
 }

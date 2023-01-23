@@ -2,6 +2,7 @@
 using HotelManagement.Domain.RepositoryInterfaces;
 using HotelManagement.Services.ServiceInterfaces;
 using AutoMapper;
+using HotelManagement.Domain.UnitOfWorkInterface;
 
 namespace HotelManagement.Services.Services
 {
@@ -9,8 +10,8 @@ namespace HotelManagement.Services.Services
     {
         private readonly IRoomInterface _roomInterface;
 
-        public RoomService(IRoomInterface roomInterface, IMapper mapper)
-            :base(mapper)
+        public RoomService(IRoomInterface roomInterface, IMapper mapper, IUnitOfWork unitOfWork)
+            :base(mapper, unitOfWork)
         {
             _roomInterface = roomInterface;
         }
