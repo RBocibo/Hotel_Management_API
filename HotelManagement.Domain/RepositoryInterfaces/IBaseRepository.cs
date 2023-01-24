@@ -9,5 +9,6 @@ namespace HotelManagement.Domain.RepositoryInterfaces
         Task DeleteAsync(Expression<Func<TEntity, bool>> expression);
         Task<TEntity> GetByIdAsync(Expression<Func<TEntity, bool>> expression);
         Task<List<TEntity>> GetAllAsync();
+        Task<TEntity> FindByExpression(Expression<Func<TEntity, bool>> expression);
     }
 }

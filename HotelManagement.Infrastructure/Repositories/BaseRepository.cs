@@ -30,6 +30,12 @@ namespace HotelManagement.Infrastructure.Repositories
 
         }
 
+        public async Task<TEntity> FindByExpression(Expression<Func<TEntity, bool>> expression)
+        {
+            var entity = await _dbset.FirstOrDefaultAsync(expression);
+            return entity;
+        }
+
         public async Task<List<TEntity>> GetAllAsync()
         {
             return await _dbset.ToListAsync();

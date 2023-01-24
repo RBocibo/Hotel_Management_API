@@ -12,6 +12,9 @@ namespace HotelManagement.Models.AutoMapper
             CreateMap<CreateCustomerDTO, Customer>().ReverseMap();
             CreateMap<CreateReservationDTO, Reservation>().ReverseMap();
             CreateMap<CreatePaymentDTO, Payment>().ReverseMap();
+            CreateMap<GetRoomByRoomTypeDTO, Room>().ReverseMap();
+            CreateMap<Room, GetRoomByRoomTypeDTO>().ReverseMap();
+            CreateMap<Room, GetAllRoomsDTO>().ReverseMap();
         }
     }
 }
