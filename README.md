@@ -12,3 +12,4 @@
 - As a user I want to be able to pay for the reservation I made.
 - Customers can search hotels based on Room Category (examples. Radisson (VIP) Suit, President Suit
 (Luxury)).
+- As a user I want to see all the hotel rooms available
